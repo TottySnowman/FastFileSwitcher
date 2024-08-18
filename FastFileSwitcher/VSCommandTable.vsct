@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<Extern href="stdidcmd.h"/>
+	<Extern href="vsshlids.h"/>
+	<Include href="KnownImageIds.vsct"/>
+	<Include href="VSGlobals.vsct"/>
+
+	<Commands package="FastFileSwitcher">
+		<Groups>
+			<!-- Main menu group -->
+			<Group guid="FastFileSwitcher" id="MyMenuGroup" priority="0x0600">
+				<Parent guid="VSMainMenu" id="Tools"/>
+			</Group>
+
+			<!-- Dropdown menu group -->
+			<Group guid="FastFileSwitcher" id="DropdownMenuGroup" priority="0x0700">
+				<Parent guid="FastFileSwitcher" id="MyMenuGroup"/>
+			</Group>
+		</Groups>
+
+		<Buttons>
+			<!-- Main menu item -->
+			<Button guid="FastFileSwitcher" id="AddFileCommand" priority="0x0100" type="Button">
+				<Parent guid="FastFileSwitcher" id="MyMenuGroup"/>
+				<Icon guid="ImageCatalogGuid" id="StatusInformation"/>
+				<CommandFlag>IconIsMoniker</CommandFlag>
+				<Strings>
+					<ButtonText>Add File to Switcher</ButtonText>
+					<LocCanonicalName>.FastFileSwitcher.AddFile</LocCanonicalName>
+				</Strings>
+			</Button>
+
+			<Button guid="FastFileSwitcher" id="DisplayFilesCommand" priority="0x0200" type="Button">
+				<Parent guid="FastFileSwitcher" id="MyMenuGroup"/>
+				<Icon guid="ImageCatalogGuid" id="StatusInformation"/>
+				<CommandFlag>IconIsMoniker</CommandFlag>
+				<Strings>
+					<ButtonText>Display all files</ButtonText>
+					<LocCanonicalName>.FastFileSwitcher.DisplayFiles</LocCanonicalName>
+				</Strings>
+			</Button>
+
+			<!-- Dropdown button -->
+			<Button guid="FastFileSwitcher" id="SwitchToFileCommand" priority="0x0300" type="SplitDropDown">
+				<Parent guid="FastFileSwitcher" id="MyMenuGroup"/>
+				<Icon guid="ImageCatalogGuid" id="StatusInformation"/>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<Strings>
+					<ButtonText>Switch to File</ButtonText>
+					<LocCanonicalName>.FastFileSwitcher.SwitchToFile</LocCanonicalName>
+				</Strings>
+			</Button>
+
+			<!-- Dropdown menu item 1 -->
+			<Button guid="FastFileSwitcher" id="SwitchToFile1" priority="0x0400" type="Button">
+				<Parent guid="FastFileSwitcher" id="DropdownMenuGroup"/>
+				<Icon guid="ImageCatalogGuid" id="StatusInformation"/>
+				<CommandFlag>IconIsMoniker</CommandFlag>
+				<Strings>
+					<ButtonText>Switch to File 1</ButtonText>
+					<LocCanonicalName>.FastFileSwitcher.SwitchToFile</LocCanonicalName>
+				</Strings>
+			</Button>
+
+			<!-- Dropdown menu item 2 -->
+			<Button guid="FastFileSwitcher" id="SwitchToFile2" priority="0x0500" type="Button">
+				<Parent guid="FastFileSwitcher" id="DropdownMenuGroup"/>
+				<Icon guid="ImageCatalogGuid" id="StatusInformation"/>
+				<CommandFlag>IconIsMoniker</CommandFlag>
+				<Strings>
+					<ButtonText>Switch to File 2</ButtonText>
+					<LocCanonicalName>.FastFileSwitcher.SwitchToFile2</LocCanonicalName>
+				</Strings>
+			</Button>
+			<Button guid="FastFileSwitcher" id="SwitchToFile3" priority="0x0600" type="Button">
+				<Parent guid="FastFileSwitcher" id="DropdownMenuGroup"/>
+				<Icon guid="ImageCatalogGuid" id="StatusInformation"/>
+				<CommandFlag>IconIsMoniker</CommandFlag>
+				<Strings>
+					<ButtonText>Switch to File 3</ButtonText>
+					<LocCanonicalName>.FastFileSwitcher.SwitchToFile3</LocCanonicalName>
+				</Strings>
+			</Button>
+			<Button guid="FastFileSwitcher" id="SwitchToFile4" priority="0x0700" type="Button">
+				<Parent guid="FastFileSwitcher" id="DropdownMenuGroup"/>
+				<Icon guid="ImageCatalogGuid" id="StatusInformation"/>
+				<CommandFlag>IconIsMoniker</CommandFlag>
+				<Strings>
+					<ButtonText>Switch to File 4</ButtonText>
+					<LocCanonicalName>.FastFileSwitcher.SwitchToFile4</LocCanonicalName>
+				</Strings>
+			</Button>
+			<Button guid="FastFileSwitcher" id="SwitchToFile5" priority="0x0800" type="Button">
+				<Parent guid="FastFileSwitcher" id="DropdownMenuGroup"/>
+				<Icon guid="ImageCatalogGuid" id="StatusInformation"/>
+				<CommandFlag>IconIsMoniker</CommandFlag>
+				<Strings>
+					<ButtonText>Switch to File 5</ButtonText>
+					<LocCanonicalName>.FastFileSwitcher.SwitchToFile5</LocCanonicalName>
+				</Strings>
+			</Button>
+			<Button guid="FastFileSwitcher" id="SwitchToFile6" priority="0x0900" type="Button">
+				<Parent guid="FastFileSwitcher" id="DropdownMenuGroup"/>
+				<Icon guid="ImageCatalogGuid" id="StatusInformation"/>
+				<CommandFlag>IconIsMoniker</CommandFlag>
+				<Strings>
+					<ButtonText>Switch to File 6</ButtonText>
+					<LocCanonicalName>.FastFileSwitcher.SwitchToFile6</LocCanonicalName>
+				</Strings>
+			</Button>
+			<Button guid="FastFileSwitcher" id="SwitchToFile7" priority="0x1000" type="Button">
+				<Parent guid="FastFileSwitcher" id="DropdownMenuGroup"/>
+				<Icon guid="ImageCatalogGuid" id="StatusInformation"/>
+				<CommandFlag>IconIsMoniker</CommandFlag>
+				<Strings>
+					<ButtonText>Switch to File 7</ButtonText>
+					<LocCanonicalName>.FastFileSwitcher.SwitchToFile7</LocCanonicalName>
+				</Strings>
+			</Button>
+			<Button guid="FastFileSwitcher" id="SwitchToFile8" priority="0x1100" type="Button">
+				<Parent guid="FastFileSwitcher" id="DropdownMenuGroup"/>
+				<Icon guid="ImageCatalogGuid" id="StatusInformation"/>
+				<CommandFlag>IconIsMoniker</CommandFlag>
+				<Strings>
+					<ButtonText>Switch to File 8</ButtonText>
+					<LocCanonicalName>.FastFileSwitcher.SwitchToFile8</LocCanonicalName>
+				</Strings>
+			</Button>
+			<Button guid="FastFileSwitcher" id="SwitchToFile9" priority="0x1200" type="Button">
+				<Parent guid="FastFileSwitcher" id="DropdownMenuGroup"/>
+				<Icon guid="ImageCatalogGuid" id="StatusInformation"/>
+				<CommandFlag>IconIsMoniker</CommandFlag>
+				<Strings>
+					<ButtonText>Switch to File 9</ButtonText>
+					<LocCanonicalName>.FastFileSwitcher.SwitchToFile9</LocCanonicalName>
+				</Strings>
+			</Button>
+		</Buttons>
+	</Commands>
+
+	<KeyBindings>
+		<!-- Key bindings -->
+		<KeyBinding guid="FastFileSwitcher" id="AddFileCommand" editor="guidVSStd97" key1="0x41" mod1="ALT"/>
+		<KeyBinding guid="FastFileSwitcher" id="SwitchToFile1" editor="guidVSStd97" key1="0x31" mod1="ALT"/>
+		<KeyBinding guid="FastFileSwitcher" id="SwitchToFile2" editor="guidVSStd97" key1="0x32" mod1="ALT"/>
+		<KeyBinding guid="FastFileSwitcher" id="SwitchToFile3" editor="guidVSStd97" key1="0x33" mod1="ALT"/>
+		<KeyBinding guid="FastFileSwitcher" id="SwitchToFile4" editor="guidVSStd97" key1="0x34" mod1="ALT"/>
+		<KeyBinding guid="FastFileSwitcher" id="SwitchToFile5" editor="guidVSStd97" key1="0x35" mod1="ALT"/>
+		<KeyBinding guid="FastFileSwitcher" id="SwitchToFile6" editor="guidVSStd97" key1="0x36" mod1="ALT"/>
+		<KeyBinding guid="FastFileSwitcher" id="SwitchToFile7" editor="guidVSStd97" key1="0x37" mod1="ALT"/>
+		<KeyBinding guid="FastFileSwitcher" id="SwitchToFile8" editor="guidVSStd97" key1="0x38" mod1="ALT"/>
+		<KeyBinding guid="FastFileSwitcher" id="SwitchToFile9" editor="guidVSStd97" key1="0x39" mod1="ALT"/>
+	</KeyBindings>
+
+	<Symbols>
+		<GuidSymbol name="FastFileSwitcher" value="{b0682221-b6a6-49ce-96c6-0897fd231408}">
+			<IDSymbol name="MyMenuGroup" value="0x0001"/>
+			<IDSymbol name="DropdownMenuGroup" value="0x0002"/>
+			<IDSymbol name="AddFileCommand" value="0x0100"/>
+			<IDSymbol name="DisplayFilesCommand" value="0x0200"/>
+			<IDSymbol name="SwitchToFileCommand" value="0x0300"/>
+			<IDSymbol name="SwitchToFile1" value="0x0400"/>
+			<IDSymbol name="SwitchToFile2" value="0x0500"/>
+			<IDSymbol name="SwitchToFile3" value="0x0600"/>
+			<IDSymbol name="SwitchToFile4" value="0x0700"/>
+			<IDSymbol name="SwitchToFile5" value="0x0800"/>
+			<IDSymbol name="SwitchToFile6" value="0x0900"/>
+			<IDSymbol name="SwitchToFile7" value="0x1000"/>
+			<IDSymbol name="SwitchToFile8" value="0x1100"/>
+			<IDSymbol name="SwitchToFile9" value="0x1200"/>
+		</GuidSymbol>
+	</Symbols>
+</CommandTable>
