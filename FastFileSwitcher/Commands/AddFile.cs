@@ -56,10 +56,11 @@ namespace FastFileSwitcher.Commands
                 string path = dte.ActiveDocument.FullName;
                 string fileName = path.Split('\\').Last();
                 var switchCount = FileManager.Instance.GetItems().Count();
-                var existingPath = FileManager.Instance.GetItems().FirstOrDefault(file => file.FilePath == path);
-                if (existingPath != null)
+               
+                var existingPath = FileManager.Instance.GetItems().ToList().FindIndex(file => file.FilePath == path);
+                if (existingPath != -1)
                 {
-                    dte.StatusBar.Text = @$"File is already in switcher on slot {existingPath.Index}";
+                    dte.StatusBar.Text = @$"File is already in switcher on slot {existingPath + 1}";
                     return;
                 }
                 if (switchCount == 9)

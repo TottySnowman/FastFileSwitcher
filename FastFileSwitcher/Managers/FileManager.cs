@@ -46,6 +46,13 @@ namespace FastFileSwitcher.Managers
             }
         }
 
+        public void RemoveFile(int slot)
+        {
+            lock (_lock)
+            {
+                _items.RemoveAt(slot);
+            }
+        }
         public void ResetList()
         {
             lock (_lock)

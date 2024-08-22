@@ -46,6 +46,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Commands\AddFile.cs" />
+    <Compile Include="Commands\FileDisplayer.cs" />
     <Compile Include="Commands\ResetCommand.cs" />
     <Compile Include="Commands\SwitchFile.cs" />
     <Compile Include="Commands\SwitchFileBase.cs" />
@@ -57,6 +58,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>source.extension.vsixmanifest</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DisplayFiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DisplayFiles.Designer.cs">
+      <DependentUpon>DisplayFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FileDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\FileDisplay.Designer.cs">
+      <DependentUpon>FileDisplay.cs</DependentUpon>
     </Compile>
     <Compile Include="VSCommandTable.cs">
       <AutoGen>True</AutoGen>
@@ -83,16 +96,31 @@
     </VSCTCompile>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Design" />
     <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Community.VisualStudio.VSCT" Version="16.0.29.6" PrivateAssets="all" />
     <PackageReference Include="Community.VisualStudio.Toolkit.17" Version="17.0.451" ExcludeAssets="Runtime" />
     <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="17.0.5232" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="UI\DisplayFiles.resx">
+      <DependentUpon>DisplayFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FileDisplay.resx">
+      <DependentUpon>FileDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
