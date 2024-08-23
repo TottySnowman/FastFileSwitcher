@@ -19,6 +19,7 @@ namespace FastFileSwitcher
             await base.InitializeAsync(cancellationToken, progress);
             await AddFileCommand.InitializeAsync(this);
             await FileDisplayer.InitializeAsync(this);
+            await ResetSwitcherCommand.InitializeAsync(this);
             await SwitchFile1.InitializeAsync(this);
             await SwitchFile2.InitializeAsync(this);
             await SwitchFile3.InitializeAsync(this);

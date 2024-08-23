@@ -41,6 +41,15 @@
 				</Strings>
 			</Button>
 
+			<Button guid="FastFileSwitcher" id="ResetSwitcherCommand" priority="0x0210" type="Button">
+				<Parent guid="FastFileSwitcher" id="MyMenuGroup"/>
+				<Icon guid="ImageCatalogGuid" id="StatusInformation"/>
+				<CommandFlag>IconIsMoniker</CommandFlag>
+				<Strings>
+					<ButtonText>Reset Switcher</ButtonText>
+					<LocCanonicalName>.FastFileSwitcher.ResetSwitcher</LocCanonicalName>
+				</Strings>
+			</Button>
 			<!-- Dropdown button -->
 			<Button guid="FastFileSwitcher" id="SwitchToFileCommand" priority="0x0300" type="SplitDropDown">
 				<Parent guid="FastFileSwitcher" id="MyMenuGroup"/>
@@ -159,6 +168,7 @@
 			<IDSymbol name="DropdownMenuGroup" value="0x0002"/>
 			<IDSymbol name="AddFileCommand" value="0x0100"/>
 			<IDSymbol name="DisplayFilesCommand" value="0x0200"/>
+			<IDSymbol name="ResetSwitcherCommand" value="0x0210"/>
 			<IDSymbol name="SwitchToFileCommand" value="0x0300"/>
 			<IDSymbol name="SwitchToFile1" value="0x0400"/>
 			<IDSymbol name="SwitchToFile2" value="0x0500"/>
