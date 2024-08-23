@@ -6,8 +6,8 @@ Is a Visual Studio Extension to switch fast between different files
  - [x] Display added files
  - [x] Delete Files from the switcher
  - [x] Switch between files
+ - [x] Full Reset the Switcher
 ## To be done
- - [ ] Full Reset the Switcher
  - [ ] Shortcuts remove a file at a specific slot
  - [ ] Shortcut to display the files
  - [ ] Add files at specific slots with shortcuts
