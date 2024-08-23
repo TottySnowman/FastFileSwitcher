@@ -48,6 +48,7 @@
     <Compile Include="Commands\AddFile.cs" />
     <Compile Include="Commands\FileDisplayer.cs" />
     <Compile Include="Commands\ResetCommand.cs" />
+    <Compile Include="Commands\ResetSwitcherCommand.cs" />
     <Compile Include="Commands\SwitchFile.cs" />
     <Compile Include="Commands\SwitchFileBase.cs" />
     <Compile Include="Managers\FileManager.cs" />

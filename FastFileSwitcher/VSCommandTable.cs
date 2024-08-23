@@ -24,6 +24,7 @@ namespace FastFileSwitcher
         public const int DropdownMenuGroup = 0x0002;
         public const int AddFileCommand = 0x0100;
         public const int DisplayFilesCommand = 0x0200;
+        public const int ResetSwitcherCommand = 0x0210;
         public const int SwitchToFileCommand = 0x0300;
         public const int SwitchToFile1 = 0x0400;
         public const int SwitchToFile2 = 0x0500;
